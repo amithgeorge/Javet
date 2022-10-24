@@ -36,7 +36,7 @@ Build Javet for Linux on Linux or Windows
 
     git clone https://github.com/caoccao/Javet.git
     cd Javet
-    docker build -f docker/linux-x86_64/build.Dockerfile .
+    docker run --rm --name javet-dev-local --volume $(pwd):/Javet --workdir /Javet amithgeorge/javet-linux-dev:gradle-deps-latest /Javet/scripts/shell/build_javet_artifacts
 
 .. note::
 
